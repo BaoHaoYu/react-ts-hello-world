@@ -1,26 +1,8 @@
-import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
-import webpack from 'webpack'
+import * as webpack from 'webpack'
+import common from './webpack.common.config'
 
 const webpackConfig: webpack.Configuration = {
-  entry: {
-    main: ['./src/app/index.tsx'],
-  },
-  mode: process.env.NODE_ENV,
-  resolve: {
-    plugins: [
-      new TsconfigPathsPlugin({
-        configFile: './tsconfig.app.json',
-      }),
-    ],
-    ...resolve,
-  },
-  output,
-  devtool: false,
-  module: {
-    rules: rules(true),
-  },
-  optimization,
-  plugins,
+  ...common
 }
 
 export default webpackConfig
