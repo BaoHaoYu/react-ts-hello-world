@@ -29,10 +29,7 @@ const webpackConfig: Partial<webpack.Configuration> = {
   },
   resolve: {
     alias: {
-      'react-dom':
-        process.env.NODE_ENV !== 'production'
-          ? '@hot-loader/react-dom'
-          : 'react-dom',
+      'react-dom': process.env.NODE_ENV !== 'production' ? '@hot-loader/react-dom' : 'react-dom',
       src: './',
     },
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
