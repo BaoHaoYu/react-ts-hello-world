@@ -1,9 +1,24 @@
 import * as React from 'react'
-import * as ReactDOM from 'react-dom'
-import Main from './main'
+import { hot } from 'react-hot-loader'
+// @ts-ignore./App
+import css from './App.scss'
+// @ts-ignore
+import logo from './logo.svg'
 
-function renderApp() {
-  ReactDOM.render(<Main />, document.querySelector('#react'))
+function Main() {
+  return (
+    <div className={css.App}>
+      <header className={css['App-header']}>
+        <img src={logo} className={css['App-logo']} alt="logo" />
+        <p>
+          Edit <code>src/App.tsx</code> and save to reload.
+        </p>
+        <a className={css['App-link']} href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
+          Learn React
+        </a>
+      </header>
+    </div>
+  )
 }
 
-renderApp()
+export default hot(module)(Main)

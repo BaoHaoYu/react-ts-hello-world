@@ -1,13 +1,18 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import path from 'path'
+// @ts-ignore
+import precss from 'precss'
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 import webpack from 'webpack'
+
+const isProduction = process.env.NODE_ENV === 'production'
+
 /**
  * 通用的webpack配置
  */
 const webpackConfig: Partial<webpack.Configuration> = {
-  entry: './src/app.tsx',
-  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
+  entry: './src/index.tsx',
+  mode: isProduction ? 'production' : 'development',
   module: {
     rules: [
       {
@@ -22,6 +27,51 @@ const webpackConfig: Partial<webpack.Configuration> = {
           },
           {
             loader: 'react-docgen-typescript-loader',
+          },
+        ],
+      },
+      {
+        test: /\.scss/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                mode: 'local',
+                localIdentName: '[local]__[hash:base64:5]',
+              },
+              sourceMap: !isProduction,
+              importLoaders: 1,
+            },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: !isProduction,
+              plugins() {
+                return [precss]
+              },
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: !isProduction,
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(png|jpg|svg)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            },
           },
         ],
       },
