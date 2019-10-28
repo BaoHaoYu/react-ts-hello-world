@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
     "downlevelIteration": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
@@ -19,15 +20,24 @@
     "target": "es5",
     "lib": [
       "dom",
+      "dom.iterable",
       "es2015.collection",
       "es2015.iterable",
       "es2015.promise",
       "es5"
+    ],
+    "typeRoots": [
+      "types",
+      "node_modules/@types"
     ]
   },
+  "include": [
+    "src",
+    "webpack.common.config.ts",
+    "webpack.server.config.ts",
+    "webpack.app.config.ts"
+  ],
   "exclude": [
-    "build",
-    "dist",
     "node_modules"
   ]
 }
