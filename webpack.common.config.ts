@@ -1,6 +1,6 @@
-import webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import path from 'path'
+import webpack from 'webpack'
 
 /**
  * 通用的webpack配置
