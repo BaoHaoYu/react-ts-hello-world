@@ -58,7 +58,7 @@ const webpackConfig: Partial<webpack.Configuration> = {
   ],
   output: {
     filename: '[name].js',
-    path: path.join(__dirname, '__build__')
+    path: path.join(__dirname, '__build__'),
   },
 }
 
