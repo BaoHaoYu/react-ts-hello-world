@@ -2,6 +2,9 @@ import webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import path from 'path'
 
+/**
+ * 通用的webpack配置
+ */
 const webpackConfig: Partial<webpack.Configuration> = {
   entry: './src/app.tsx',
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',

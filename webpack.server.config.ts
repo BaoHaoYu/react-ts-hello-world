@@ -3,16 +3,19 @@ import * as devserver from 'webpack-dev-server'
 import common from './webpack.common.config'
 import path from 'path'
 
+/**
+ * webpack-dev-server所需要的配置
+ */
 const webpackConfig: webpack.Configuration & {
   devServer: devserver.Configuration
 } = {
+  ...common,
   devServer: {
     contentBase: path.join(__dirname, '__build__'),
     port: 9000,
     host: 'localhost',
   },
   mode: 'development',
-  ...common,
 }
 
 export default webpackConfig
