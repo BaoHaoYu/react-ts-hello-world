@@ -25,10 +25,6 @@
       "es2015.iterable",
       "es2015.promise",
       "es5"
-    ],
-    "typeRoots": [
-      "types",
-      "node_modules/@types"
     ]
   },
   "include": [
