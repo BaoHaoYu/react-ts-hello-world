@@ -1,7 +1,7 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import path from 'path'
+import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 import webpack from 'webpack'
-
 /**
  * 通用的webpack配置
  */
@@ -30,9 +30,13 @@ const webpackConfig: Partial<webpack.Configuration> = {
   resolve: {
     alias: {
       'react-dom': process.env.NODE_ENV !== 'production' ? '@hot-loader/react-dom' : 'react-dom',
-      src: './',
     },
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
+    plugins: [
+      new TsconfigPathsPlugin({
+        configFile: path.join(__dirname, 'tsconfig.app.json'),
+      }),
+    ],
   },
   optimization: {
     splitChunks: {
