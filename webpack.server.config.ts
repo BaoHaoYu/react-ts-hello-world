@@ -15,7 +15,6 @@ const webpackConfig: webpack.Configuration & {
     port: 9000,
     host: 'localhost',
   },
-  mode: 'development',
 }
 
 export default webpackConfig
