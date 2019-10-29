@@ -108,7 +108,7 @@ const webpackConfig: Partial<webpack.Configuration> = {
       },
     }),
     new HtmlWebpackPlugin({
-      template: 'src/index.html',
+      template: 'public/index.html',
     }),
   ],
   output: {
