@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { hot } from 'react-hot-loader'
-// @ts-ignore./App
+// @ts-ignore
 import css from './App.scss'
 // @ts-ignore
 import logo from './logo.svg'
@@ -13,7 +13,12 @@ function Main() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <a className={css['App-link']} href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
+        <a
+          className={css['App-link']}
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Learn React
         </a>
       </header>
