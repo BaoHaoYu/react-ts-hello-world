@@ -13,6 +13,7 @@ const isProduction = process.env.NODE_ENV === 'production'
 const webpackConfig: Partial<webpack.Configuration> = {
   entry: './src/index.tsx',
   mode: isProduction ? 'production' : 'development',
+  devtool: isProduction ? false : 'source-map',
   module: {
     rules: [
       {
