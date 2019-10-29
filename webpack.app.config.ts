@@ -9,7 +9,6 @@ fse.copy('./public', '__build__')
  */
 const webpackConfig: webpack.Configuration = {
   ...common,
-  mode: 'production',
 }
 
 export default webpackConfig
