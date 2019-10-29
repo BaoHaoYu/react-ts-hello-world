@@ -1,5 +1,8 @@
+import fse from 'fs-extra'
 import * as webpack from 'webpack'
 import common from './webpack.common.config'
+
+fse.copy('./public', '__build__')
 
 /**
  * 生产环境编译所需要webpack配置
