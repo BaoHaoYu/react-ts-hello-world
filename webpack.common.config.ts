@@ -111,7 +111,8 @@ const webpackConfig: Partial<webpack.Configuration> = {
     }),
   ],
   output: {
-    filename: '[name].js',
+    filename: `[name]${isProduction ? '.[hash:8]' : ''}.js`,
+    chunkFilename: `[name]${isProduction ? '.[hash:8]' : ''}.chunk.js`,
     path: path.join(__dirname, '__build__'),
   },
 }
