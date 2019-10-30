@@ -8,13 +8,13 @@ import logo from './logo.svg'
 function Main() {
   return (
     <div className={css.App}>
-      <header className={css['App-header']}>
-        <img src={logo} className={css['App-logo']} alt="logo" />
+      <header className={css.App__header}>
+        <img src={logo} className={css.App__logo} alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <a
-          className={css['App-link']}
+          className={css.App__link}
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"

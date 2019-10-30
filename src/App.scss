@@ -1,11 +1,11 @@
 .App {
   text-align: center;
 
-  &-logo {
+  &__logo {
     height: 40vmin;
   }
 
-  &-header {
+  &__header {
     background-color: #282c34;
     min-height: 100vh;
     display: flex;
@@ -16,7 +16,7 @@
     color: white;
   }
 
-  &-link {
+  &__link {
     color: #09d3ac;
   }
 }
