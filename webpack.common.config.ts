@@ -26,9 +26,6 @@ const webpackConfig: Partial<webpack.Configuration> = {
               cacheDirectory: true,
             },
           },
-          {
-            loader: 'react-docgen-typescript-loader',
-          },
         ],
       },
       {
