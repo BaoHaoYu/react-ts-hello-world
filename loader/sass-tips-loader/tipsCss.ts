@@ -1,7 +1,4 @@
-import fse from 'fs-extra'
-import globby from 'globby'
-
-const tipsCss = [
+export default [
   'tipsStart',
   'align-content',
   'align-items',
@@ -263,20 +260,3 @@ const tipsCss = [
   'z-index',
   'tipsEnd',
 ].join(' ')
-
-// 为chrome添加提示
-export function addSassTips() {
-  globby.sync('src/**/*.scss').map((filePath) => {
-    console.log(filePath)
-
-    let fileString = fse.readFileSync(filePath, { encoding: 'utf-8' })
-    if (fileString.match(/tipsStart(.|\n)+?tipsEnd/)) {
-      fileString = fileString.replace(/tipsStart(.|\n)+?tipsEnd/g, tipsCss)
-    } else {
-      fileString = fileString + `\n/* ${tipsCss} */\n`
-    }
-    fse.writeFileSync(filePath, fileString, { encoding: 'utf-8' })
-  })
-}
-
-addSassTips()
