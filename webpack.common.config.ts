@@ -63,9 +63,6 @@ const webpackConfig: Partial<webpack.Configuration> = {
                             sourceMap: !isProduction,
                         },
                     },
-                    {
-                        loader: path.resolve('./loader/sass-tips-loader/index.ts'),
-                    },
                 ],
             },
             {
@@ -83,8 +80,7 @@ const webpackConfig: Partial<webpack.Configuration> = {
     },
     resolve: {
         alias: {
-            'react-dom':
-                process.env.NODE_ENV !== 'production' ? '@hot-loader/react-dom' : 'react-dom',
+            'react-dom': process.env.NODE_ENV !== 'production' ? '@hot-loader/react-dom' : 'react-dom',
         },
         extensions: ['.ts', '.tsx', '.js', '.jsx'],
         plugins: [
