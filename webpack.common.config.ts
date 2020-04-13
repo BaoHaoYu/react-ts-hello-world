@@ -95,7 +95,7 @@ const webpackConfig: Partial<webpack.Configuration> = {
             cacheGroups: {
                 vendors: {
                     test: /[\\/]node_modules[\\/]/,
-                    name: 'verdor',
+                    name: 'vendor',
                     chunks: 'initial',
                 },
             },
