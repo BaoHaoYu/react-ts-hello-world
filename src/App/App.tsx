@@ -11,12 +11,7 @@ function Main() {
                 <p>
                     Edit <code>src/App/App.tsx</code> and save to reload.
                 </p>
-                <a
-                    className={css.App__link}
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+                <a className={css.App__link} href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
                     Learn React
                 </a>
             </header>
