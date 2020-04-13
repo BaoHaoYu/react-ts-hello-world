@@ -266,7 +266,7 @@ const tipsCss = [
 
 // 为chrome添加提示
 export function addSassTips() {
-    globby.sync('src/**/*.scss').map((filePath) => {
+    globby.sync('**/*.scss', { gitignore: true }).map((filePath) => {
         console.log(filePath)
 
         let fileString = fse.readFileSync(filePath, { encoding: 'utf-8' })
