@@ -13,7 +13,7 @@
         "tslint": "tslint --fix -p tsconfig.json",
         "stylelint": "stylelint **/*.scss **/*.css",
         "prettier": "prettier --write **/*.json **/*.md .prettierrc .stylelintrc .babelrc",
-        "lint": "npm run tslint & stylelint & prettier",
+        "lint": "npm run tslint && npm run stylelint && npm run prettier",
         "csstip": "ts-node util/csstip.ts"
     },
     "dependencies": {
