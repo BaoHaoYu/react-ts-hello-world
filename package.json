@@ -11,7 +11,7 @@
         "dev-server": "cross-env NODE_ENV=development webpack-dev-server --config ./webpack.server.config.ts --hot",
         "app": "cross-env NODE_ENV=production webpack --config ./webpack.app.config.ts",
         "tslint": "tslint --fix -p tsconfig.json",
-        "stylelint": "stylelint src/**/*.scss src/**/*.css src/*/*.scss src/*/*.css",
+        "stylelint": "stylelint **/*.scss **/*.css",
         "prettier": "prettier --write **/*.json **/*.md .prettierrc .stylelintrc .babelrc",
         "lint": "npm run tslint & stylelint & prettier"
     },
