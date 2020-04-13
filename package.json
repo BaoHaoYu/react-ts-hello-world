@@ -51,6 +51,7 @@
         "json-schema": "^0.2.5",
         "loader-utils": "^1.2.3",
         "lodash": "^4.17.15",
+        "minimist": "^1.2.5",
         "node-sass": "^4.13.0",
         "postcss-loader": "^3.0.0",
         "precss": "^4.0.0",
@@ -76,7 +77,11 @@
         "webpack-dev-server": "^3.9.0"
     },
     "browserslist": {
-        "production": [">0.2%", "not dead", "not op_mini all"],
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
         "development": [
             "last 1 chrome version",
             "last 1 firefox version",
