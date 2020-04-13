@@ -12,7 +12,7 @@
         "app": "cross-env NODE_ENV=production webpack --config ./webpack.app.config.ts",
         "tslint": "tslint --fix -p tsconfig.json",
         "stylelint": "stylelint src/**/*.scss src/**/*.css src/*/*.scss src/*/*.css",
-        "prettier": "prettier --write **/*.json **/*.md",
+        "prettier": "prettier --write **/*.json **/*.md .prettierrc .stylelintrc .babelrc",
         "lint": "npm run tslint & stylelint & prettier"
     },
     "dependencies": {
@@ -76,11 +76,7 @@
         "webpack-dev-server": "^3.9.0"
     },
     "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
+        "production": [">0.2%", "not dead", "not op_mini all"],
         "development": [
             "last 1 chrome version",
             "last 1 firefox version",

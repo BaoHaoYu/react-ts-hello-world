@@ -1,21 +1,13 @@
 {
     "extends": "stylelint-config-standard",
-    "plugins": [
-        "stylelint-scss"
-    ],
+    "plugins": ["stylelint-scss"],
     "rules": {
         "indentation": 4,
         "declaration-block-trailing-semicolon": null,
         "at-rule-no-unknown": [
             true,
             {
-                "ignoreAtRules": [
-                    "function",
-                    "if",
-                    "each",
-                    "include",
-                    "mixin"
-                ]
+                "ignoreAtRules": ["function", "if", "each", "include", "mixin"]
             }
         ],
         "scss/at-rule-no-unknown": true
