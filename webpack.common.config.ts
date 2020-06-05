@@ -29,6 +29,20 @@ const webpackConfig: Partial<webpack.Configuration> = {
         ],
       },
       {
+        test: /\.css/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: !isProduction,
+            },
+          },
+        ],
+      },
+      {
         test: /\.scss/,
         use: [
           {
