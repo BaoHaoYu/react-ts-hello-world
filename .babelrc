@@ -18,6 +18,7 @@
       }
     ],
     ["@babel/plugin-syntax-dynamic-import"],
+    ["lodash"],
     "react-hot-loader/babel"
   ]
 }
