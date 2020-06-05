@@ -16,7 +16,7 @@ yarn
 yarn run dev-server
 ```
 
-打开页面： `http://localhost:9000/`
+打开页面： `http://localhost:9050/`
 
 ## 规范
 

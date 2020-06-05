@@ -4,8 +4,10 @@ import path from 'path'
 import precss from 'precss'
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 import webpack from 'webpack'
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
 const isProduction = process.env.NODE_ENV === 'production'
+const analyzer = process.env.analyzer
 
 /**
  * 通用的webpack配置
@@ -127,5 +129,7 @@ const webpackConfig: Partial<webpack.Configuration> = {
     path: path.join(__dirname, '__build__'),
   },
 }
+
+analyzer && webpackConfig.plugins!.push(new BundleAnalyzerPlugin())
 
 export default webpackConfig

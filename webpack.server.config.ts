@@ -12,7 +12,7 @@ const webpackConfig: webpack.Configuration & {
   ...common,
   devServer: {
     contentBase: [path.join(__dirname, '__build__'), path.join(__dirname, 'public')],
-    port: 9000,
+    port: 9050,
     host: 'localhost',
   },
 }
