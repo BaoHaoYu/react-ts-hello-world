@@ -97,7 +97,7 @@ const webpackConfig: Partial<webpack.Configuration> = {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
     plugins: [
       new TsconfigPathsPlugin({
-        configFile: path.join(__dirname, 'tsconfig.app.json'),
+        configFile: path.join(__dirname, 'tsconfig.json'),
       }),
     ],
   },
