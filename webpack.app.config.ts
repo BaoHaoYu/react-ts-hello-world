@@ -9,7 +9,7 @@ fse.copySync('public', '__build__')
  * 生产环境编译所需要webpack配置
  */
 const webpackConfig: webpack.Configuration = {
-    ...common,
+  ...common,
 }
 
 export default webpackConfig
