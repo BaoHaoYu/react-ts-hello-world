@@ -1,26 +1,30 @@
-import * as React from 'react'
+import React from 'react'
 import { hot } from 'react-hot-loader'
-import logo from '../logo.svg'
+import { HashRouter, NavLink, Route } from 'react-router-dom'
+import { P2 } from '~/Page/P2/P2'
 import './App.scss'
+
+const LoadP1 = React.lazy(() => import('../Page/P1/P1'))
 
 function Main() {
   return (
-    <div className={'App'}>
-      <header className={'App__header'}>
-        <img src={logo} className={'App__logo'} alt="logo" />
-        <p>
-          Edit <code>src/App/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className={'App__link'}
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HashRouter>
+      <div className={'App'}>
+        <NavLink to="/p1">P1</NavLink>
+        {'   '}
+        <NavLink to="/p2">P2</NavLink>
+      </div>
+
+      <Route path="/p1">
+        <React.Suspense fallback="">
+          <LoadP1 />
+        </React.Suspense>
+      </Route>
+
+      <Route path="/p2">
+        <P2 />
+      </Route>
+    </HashRouter>
   )
 }
 
