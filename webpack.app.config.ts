@@ -1,5 +1,5 @@
 import fse from 'fs-extra'
-import * as webpack from 'webpack'
+import webpack from 'webpack'
 import common from './webpack.common.config'
 
 fse.emptyDirSync('__build__')

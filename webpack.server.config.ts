@@ -1,13 +1,13 @@
 import path from 'path'
-import * as webpack from 'webpack'
-import * as devserver from 'webpack-dev-server'
+import webpack from 'webpack'
+import devServer from 'webpack-dev-server'
 import common from './webpack.common.config'
 
 /**
  * webpack-dev-server所需要的配置
  */
 const webpackConfig: webpack.Configuration & {
-  devServer: devserver.Configuration
+  devServer: devServer.Configuration
 } = {
   ...common,
   devServer: {
