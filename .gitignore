@@ -1,4 +1,4 @@
 node_modules
 __build__
 .idea
-yarn-error.log
+*.log
