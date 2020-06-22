@@ -1,7 +1,5 @@
 # typescript + react + webpack Hello world
 
-webpack 也是使用 typescript 写的
-
 ## 运行项目
 
 安装
