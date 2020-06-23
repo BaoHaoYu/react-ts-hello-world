@@ -87,9 +87,6 @@ const webpackConfig: Partial<webpack.Configuration> = {
     ],
   },
   resolve: {
-    alias: {
-      'react-dom': isProduction ? '@hot-loader/react-dom' : 'react-dom',
-    },
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
     plugins: [
       new TsconfigPathsPlugin({

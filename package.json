@@ -32,7 +32,6 @@
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-react": "^7.6.3",
     "@babel/preset-typescript": "^7.6.0",
-    "@hot-loader/react-dom": "^16.10.2",
     "@types/autoprefixer": "^9.7.2",
     "@types/fs-extra": "^8.0.1",
     "@types/html-webpack-plugin": "^3.2.1",
