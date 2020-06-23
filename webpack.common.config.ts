@@ -62,9 +62,7 @@ const webpackConfig: Partial<webpack.Configuration> = {
             loader: 'postcss-loader',
             options: {
               sourceMap: !isProduction,
-              plugins() {
-                return [fixer]
-              },
+              plugins: [fixer],
             },
           },
           {
