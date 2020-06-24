@@ -1,7 +1,6 @@
+import fixer from 'autoprefixer'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import path from 'path'
-// @ts-ignore
-import precss from 'precss'
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 import webpack from 'webpack'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
@@ -63,9 +62,7 @@ const webpackConfig: Partial<webpack.Configuration> = {
             loader: 'postcss-loader',
             options: {
               sourceMap: !isProduction,
-              plugins() {
-                return [precss]
-              },
+              plugins: [fixer],
             },
           },
           {
@@ -90,10 +87,6 @@ const webpackConfig: Partial<webpack.Configuration> = {
     ],
   },
   resolve: {
-    alias: {
-      'react-dom':
-        process.env.NODE_ENV !== 'production' ? '@hot-loader/react-dom' : 'react-dom',
-    },
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
     plugins: [
       new TsconfigPathsPlugin({
