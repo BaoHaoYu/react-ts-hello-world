@@ -1,12 +1,14 @@
 {
   "name": "react-ts-hello-world",
-  "version": "0.2.0",
+  "version": "0.1.0",
   "author": "bhy",
-  "description": "react使用ts写的hello world",
+  "description": "react+storybook模板工程",
   "bugs": "https://github.com/BaoHaoYu/react-ts-hello-world/issues",
   "repository": {
     "url": "https://github.com/BaoHaoYu/react-ts-hello-world.git"
   },
+  "main": "__build__/main.umd.js",
+  "typings": "__build__/index.d.ts",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config ./webpack.app.config.ts && tsc ./src/*.tsx",
     "bundle-analyzer:build": "cross-env NODE_ENV=production analyzer=true webpack --config ./webpack.app.config.ts",
