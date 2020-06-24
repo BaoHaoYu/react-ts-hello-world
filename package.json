@@ -8,10 +8,10 @@
     "url": "https://github.com/BaoHaoYu/react-ts-hello-world.git"
   },
   "scripts": {
-    "dev-server": "cross-env NODE_ENV=development webpack-dev-server --config ./webpack.server.config.ts --hot",
-    "build": "cross-env NODE_ENV=production webpack --config ./webpack.app.config.ts",
-    "bundle-analyzer:dev-server": "cross-env NODE_ENV=development analyzer=true webpack-dev-server --config ./webpack.server.config.ts --hot",
-    "bundle-analyzer:app": "cross-env NODE_ENV=production analyzer=true webpack --config ./webpack.app.config.ts",
+    "build": "cross-env NODE_ENV=production webpack --config ./webpack.app.config.ts && tsc ./src/*.tsx",
+    "bundle-analyzer:build": "cross-env NODE_ENV=production analyzer=true webpack --config ./webpack.app.config.ts",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
     "lint:typescript": "tslint --fix -p tsconfig.json",
     "lint:style": "stylelint --fix **/*.scss **/*.css",
     "lint:prettier": "prettier --write **/*.json **/*.md .prettierrc .stylelintrc .babelrc",
@@ -32,6 +32,14 @@
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-react": "^7.6.3",
     "@babel/preset-typescript": "^7.6.0",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-docs": "^5.3.19",
+    "@storybook/addon-info": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addon-storysource": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/cli": "^5.3.19",
+    "@storybook/react": "^5.3.19",
     "@types/autoprefixer": "^9.7.2",
     "@types/fs-extra": "^8.0.1",
     "@types/html-webpack-plugin": "^3.2.1",
@@ -61,6 +69,7 @@
     "react-hot-loader": "^4.12.15",
     "sass-loader": "^8.0.0",
     "schema-utils": "^2.6.1",
+    "storybook": "^5.3.19",
     "style-loader": "^1.0.0",
     "stylelint": "^11.1.1",
     "stylelint-config-standard": "^19.0.0",
@@ -80,7 +89,11 @@
     "webpack-dev-server": "^3.9.0"
   },
   "browserslist": {
-    "production": [">0.2%", "not dead", "not op_mini all"],
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
