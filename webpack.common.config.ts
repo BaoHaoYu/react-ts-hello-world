@@ -3,7 +3,6 @@ import path from 'path'
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 import webpack from 'webpack'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
-import tsconfig from './tsconfig.json'
 
 const isProduction = process.env.NODE_ENV === 'production'
 const analyzer = process.env.analyzer
