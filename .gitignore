@@ -1,4 +1,7 @@
-node_modules
-__build__
-.idea
+node_modules/
+coverage/
+__build__/
+__test__/__snapshots__/
+.idea/
 *.log
+
