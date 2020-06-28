@@ -4,7 +4,7 @@ import { Demo } from '~/index'
 export const DemoStory = () => {
   return (
     <div>
-      <Demo />
+      <Demo msg={'story'} />
     </div>
   )
 }

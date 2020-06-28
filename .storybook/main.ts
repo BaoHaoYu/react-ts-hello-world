@@ -6,7 +6,7 @@ interface IS<T = Partial<Configuration>> {
 }
 
 export default {
-  stories: ['../stories/*.tsx'],
+  stories: ['../__stories__/*.story.tsx'],
   addons: [
     '@storybook/addon-actions',
     '@storybook/addon-links',
