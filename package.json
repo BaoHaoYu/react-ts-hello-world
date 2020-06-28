@@ -10,9 +10,8 @@
   "main": "__build__/main.umd.js",
   "typings": "__build__/index.d.ts",
   "scripts": {
-    "build:umd": "cross-env NODE_ENV=production webpack --config ./webpack.app.config.ts && tsc ./src/*.tsx",
+    "build": "cross-env NODE_ENV=production webpack --config ./webpack.app.config.ts",
     "build:storybook": "build-storybook",
-    "build": "npm run build:umd && npm run build:style",
     "bundle-analyzer:build": "cross-env NODE_ENV=production analyzer=true webpack --config ./webpack.app.config.ts",
     "storybook": "start-storybook -p 6006",
     "lint:typescript": "tslint --fix -p tsconfig.json",
@@ -90,6 +89,7 @@
     "stylelint-config-standard": "^19.0.0",
     "stylelint-scss": "^3.12.0",
     "ts-jest": "^26.1.1",
+    "ts-loader": "^7.0.5",
     "ts-node": "^8.4.1",
     "tsconfig-paths-webpack-plugin": "^3.2.0",
     "tslint": "^5.20.0",

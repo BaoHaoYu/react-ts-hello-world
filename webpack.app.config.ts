@@ -1,7 +1,6 @@
 import fse from 'fs-extra'
 import _ from 'lodash'
 import path from 'path'
-import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 import webpack from 'webpack'
 import pkg from './package.json'
 import common from './webpack.common.config'
