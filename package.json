@@ -20,6 +20,7 @@
     "lint:style": "stylelint --fix **/*.scss **/*.css",
     "lint:prettier": "prettier --write **/*.typescriptjson **/*.md .prettierrc .stylelintrc .babelrc",
     "lint": "npm run lint:prettier && npm run lint:style && npm run lint:typescript",
+    "test:coverage": "jest --collect-coverage",
     "test": "jest",
     "csstip": "ts-node util/csstip.ts"
   },
