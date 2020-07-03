@@ -1,17 +1,19 @@
-# typescript + react + webpack Hello world
+# webpack react lib
 
-## 运行项目
+## 编译
 
-安装
-
-```bash
-yarn
+```shell script
+npm run build
 ```
 
-启动
+## jest 测试
 
-```bash
-yarn run dev-server
+```shell script
+npm run test
 ```
 
-打开页面： `http://localhost:9050/`
+## storybook
+
+```shell script
+npm run storybook
+```
