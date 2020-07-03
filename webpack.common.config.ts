@@ -54,7 +54,7 @@ const webpackConfig: Partial<webpack.Configuration> = {
             },
           },
           {
-            loader: path.resolve('./loader/css-map-loader/index.ts'),
+            loader: 'sass-sourcemap-loader',
           },
           {
             loader: 'postcss-loader',
