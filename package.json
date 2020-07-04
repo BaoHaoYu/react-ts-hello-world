@@ -18,7 +18,8 @@
     "lint:style": "stylelint --fix **/*.scss **/*.css",
     "lint:prettier": "prettier --write **/*.typescriptjson **/*.md .prettierrc .stylelintrc .babelrc",
     "lint": "npm run lint:prettier && npm run lint:style && npm run lint:typescript",
-    "test:coverage": "jest --collect-coverage",
+    "test:coveralls": "jest --coverage --updateSnapshot && cat ./coverage/lcov.info | coveralls",
+    "test:coverage": "jest --coverage",
     "test:watch": "jest --watch --runInBand",
     "test": "jest"
   },
@@ -63,6 +64,7 @@
     "autoprefixer": "^9.8.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-lodash": "^3.3.4",
+    "coveralls": "^3.1.0",
     "cross-env": "^6.0.3",
     "css-loader": "^3.4.2",
     "enzyme": "^3.11.0",
